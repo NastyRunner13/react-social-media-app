@@ -38,6 +38,71 @@ export default function Rightbar() {
             </div>
             <span>1 min ago</span>
           </div>
+          <div className="user">
+            <div className="userInfo">
+              <img src="" alt="" />
+              <p>
+                <span>Prince Gupta</span> changed thier cover picture
+              </p>
+            </div>
+            <span>1 min ago</span>
+          </div>
+          <div className="user">
+            <div className="userInfo">
+              <img src="" alt="" />
+              <p>
+                <span>Prince Gupta</span> changed thier cover picture
+              </p>
+            </div>
+            <span>1 min ago</span>
+          </div>
+          <div className="user">
+            <div className="userInfo">
+              <img src="" alt="" />
+              <p>
+                <span>Prince Gupta</span> changed thier cover picture
+              </p>
+            </div>
+            <span>1 min ago</span>
+          </div>
+        </div>
+        <div className="item">
+          <span>Online Friends</span>
+          <div className="user">
+            <div className="userInfo">
+              <img src="" alt="" />
+              <div className="online" />
+              <span>Prince Gupta</span>
+            </div>
+          </div>
+          <div className="user">
+            <div className="userInfo">
+              <img src="" alt="" />
+              <div className="online" />
+              <span>Prince Gupta</span>
+            </div>
+          </div>
+          <div className="user">
+            <div className="userInfo">
+              <img src="" alt="" />
+              <div className="online" />
+              <span>Prince Gupta</span>
+            </div>
+          </div>
+          <div className="user">
+            <div className="userInfo">
+              <img src="" alt="" />
+              <div className="online" />
+              <span>Prince Gupta</span>
+            </div>
+          </div>
+          <div className="user">
+            <div className="userInfo">
+              <img src="" alt="" />
+              <div className="online" />
+              <span>Prince Gupta</span>
+            </div>
+          </div>
         </div>
       </div>
     </div>
