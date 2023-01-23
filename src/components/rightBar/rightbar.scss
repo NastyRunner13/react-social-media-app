@@ -1,87 +1,93 @@
+@import "../../style.scss";
+
 .rightbar {
-  flex: 3;
-  position: sticky;
-  top: 70px;
-  height: calc(100vh - 70px);
-  overflow: scroll;
+  @include themify($themes) {
+    flex: 3;
+    position: sticky;
+    top: 70px;
+    height: calc(100vh - 70px);
+    overflow: scroll;
+    background-color: themed("bgSoft");
 
-  &::-webkit-scrollbar {
-    display: none;
-  }
+    &::-webkit-scrollbar {
+      display: none;
+    }
 
-  .container {
-    padding: 15px;
+    .container {
+      padding: 15px;
 
-    .item {
-      -webkit-box-shadow: -2px 2px 9px -6px rgba(0, 0, 0, 0.75);
-      -moz-box-shadow: -2px 2px 9px -6px rgba(0, 0, 0, 0.75);
-      box-shadow: -2px 2px 9px -6px rgba(0, 0, 0, 0.75);
-      padding: 10px;
-      margin-bottom: 20px;
+      .item {
+        -webkit-box-shadow: -2px 2px 9px -6px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: -2px 2px 9px -6px rgba(0, 0, 0, 0.75);
+        box-shadow: -2px 2px 9px -6px rgba(0, 0, 0, 0.75);
+        padding: 10px;
+        margin-bottom: 20px;
+        background-color: themed("bg");
 
-      span {
-        color: gray;
-      }
-
-      .user {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        margin: 20px 0px;
-
-        .userInfo {
-          display: flex;
-          align-items: center;
-          gap: 10px;
-          position: relative;
-
-          img {
-            width: 30px;
-            height: 30px;
-            border-radius: 50%;
-            object-fit: cover;
-          }
-
-          .online {
-            height: 12px;
-            width: 12px;
-            border-radius: 50%;
-            background-color: lightgreen;
-            position: absolute;
-            top: 0;
-            left: 20px;
-          }
-
-          p {
-            color: gray;
-            font-size: 13px;
-          }
-
-          span {
-            font-weight: 500;
-            color: black;
-            font-size: 14px;
-          }
+        span {
+          color: gray;
         }
 
-        .buttons {
+        .user {
           display: flex;
           align-items: center;
-          gap: 10px;
+          justify-content: space-between;
+          margin: 20px 0px;
 
-          button {
-            border: none;
-            cursor: pointer;
-            padding: 5px;
-            color: white;
-            border-radius: 5px;
+          .userInfo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            position: relative;
 
-            &:first-child {
-              background-color: #5271ff;
+            img {
+              width: 30px;
+              height: 30px;
+              border-radius: 50%;
+              object-fit: cover;
             }
 
-            &:last-child {
-              background-color: #f0544f;
+            .online {
+              height: 12px;
+              width: 12px;
+              border-radius: 50%;
+              background-color: lightgreen;
+              position: absolute;
+              top: 0;
+              left: 20px;
+            }
+
+            p {
+              color: themed("textColorSoft");
+              font-size: 13px;
+            }
+
+            span {
+              font-weight: 500;
+              color: themed("textColor");
+              font-size: 14px;
+            }
+          }
+
+          .buttons {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            button {
+              border: none;
+              cursor: pointer;
+              padding: 5px;
+              color: white;
+              border-radius: 5px;
+
+              &:first-child {
+                background-color: #5271ff;
+              }
+
+              &:last-child {
+                background-color: #f0544f;
+              }
             }
           }
         }

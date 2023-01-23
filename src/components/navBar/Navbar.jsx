@@ -6,11 +6,18 @@ import {
   NotificationsOutlined,
   PersonOutlined,
   SearchOutlined,
+  WbSunnyOutlined,
 } from "@mui/icons-material";
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../Context/authContext";
+import { DarkModeContext } from "../../Context/darkModeContext";
 import "./navbar.scss";
 
 export default function Navbar() {
+  const { toggle, darkMode } = useContext(DarkModeContext);
+  const { currentUser } = useContext(AuthContext);
+
   return (
     <div className="navbar">
       <div className="left">
@@ -18,7 +25,11 @@ export default function Navbar() {
           <span>SocialMedia</span>
         </Link>
         <HomeOutlined />
-        <DarkModeOutlined />
+        {darkMode ? (
+          <WbSunnyOutlined onClick={toggle} />
+        ) : (
+          <DarkModeOutlined onClick={toggle} />
+        )}
         <GridViewOutlined />
         <div className="search">
           <SearchOutlined />
@@ -30,8 +41,8 @@ export default function Navbar() {
         <EmailOutlined />
         <NotificationsOutlined />
         <div className="user">
-          <img src="" alt="" />
-          <span>Prince</span>
+          <img src={currentUser.profilePic} alt="" />
+          <span>{currentUser.name}</span>
         </div>
       </div>
     </div>
