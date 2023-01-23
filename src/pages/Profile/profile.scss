@@ -30,6 +30,14 @@
     .profileContainer {
       padding: 20px 50px;
 
+      @include mobile {
+        padding: 10px;
+      }
+
+      @include mobile {
+        padding: 20px;
+      }
+
       .uInfo {
         -webkit-box-shadow: -2px 2px 9px -6px rgba(0, 0, 0, 0.75);
         -moz-box-shadow: -2px 2px 9px -6px rgba(0, 0, 0, 0.75);
@@ -44,10 +52,21 @@
         justify-content: space-between;
         margin-bottom: 20px;
 
+        @include mobile {
+          flex-direction: column;
+          height: 30vh;
+          padding: 10px;
+          margin-top: 80px;
+        }
+
         .left {
           flex: 1;
           display: flex;
           gap: 10px;
+
+          @include tablet {
+            flex-wrap: wrap;
+          }
 
           a {
             color: themed("textColorSoft");
@@ -64,6 +83,10 @@
           span {
             font-size: 30px;
             font-weight: 500;
+
+            @include tablet {
+              font-size: 20px;
+            }
           }
 
           .info {
